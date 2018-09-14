@@ -1,0 +1,9 @@
+.AddPlayer__input {
+  border: 1px solid #ccc;
+}
+
+.AddPlayer__submit {
+  background: none;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
