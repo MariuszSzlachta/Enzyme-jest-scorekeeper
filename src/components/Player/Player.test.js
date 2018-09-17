@@ -43,6 +43,8 @@ it('should call onPlayerRemove when x button is clicked', () => {
   const mockedOnPlayerRemove = jest.fn();
   const playerComponent = shallow(<Player onPlayerRemove={mockedOnPlayerRemove} />);
   const xButton = playerComponent.find('.Player__button').at(0);
+
   xButton.simulate('click');
+
   expect(mockedOnPlayerRemove).toBeCalled();
 });

@@ -41,6 +41,7 @@ it('shall chain call onScoreUpdate by onPlayerScoreChange', ()=> {
   const onPlayerScoreChange = firstPlayer.prop('onPlayerScoreChange');
 
   onPlayerScoreChange(10);
+
   expect(mockedOnScoreUpdate).toBeCalledWith(0, 10);
 });
 
@@ -59,6 +60,8 @@ it('check that onPlayerRemove was called', () => {
   const playerComponent = shallow(<PlayersList players={players} onPlayerRemove={mockedonPlayerRemove} />);
   const firstPlayer = playerComponent.find(Player).first();
   const onPlayerRemove = firstPlayer.prop('onPlayerRemove');
+
   onPlayerRemove();
+
   expect(mockedonPlayerRemove).toBeCalled();  
 });

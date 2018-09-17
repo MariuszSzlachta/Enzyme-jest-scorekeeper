@@ -13,7 +13,9 @@ it('check that onPlayerAdd was called', () => {
   const nameInput = addPlayerComponent.find('input').first().getDOMNode();
   nameInput.value = 'Ania';
   const form = addPlayerComponent.find('form');
+
   form.simulate('submit');
+
   expect(onPlayerAdd).toBeCalledWith('Ania');
 });
 

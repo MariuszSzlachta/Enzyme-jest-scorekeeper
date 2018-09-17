@@ -42,17 +42,20 @@ it('should delete player', () => {
   const app = shallow(<App />);
   const players = [
     {
-      name: 'Kunegunda',
+      name: 'Ania',
       score: 5,
     },
     {
-      name: 'Antoś',
+      name: 'Robert',
       score: 0,
     }
   ];
   app.setState({ players });
   const onPlayerRemove = app.find(PlayersList).prop('onPlayerRemove');
-  onPlayerRemove(1);
+
+  onPlayerRemove(0);
+
   const playersAfterUpdate = app.state('players');
-  expect(playersAfterUpdate[0].name).toEqual('Kunegunda');
+
+  expect(playersAfterUpdate[0].name).toEqual('Robert');
 });
